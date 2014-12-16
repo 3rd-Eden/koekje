@@ -26,6 +26,6 @@
   "homepage": "https://github.com/unshiftio/koekje",
   "dependencies": {
     "cookie-monster": "0.0.x",
-    "querystringify": "0.0.2"
+    "querystringify": "0.0.x"
   }
 }
