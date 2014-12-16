@@ -1,0 +1,31 @@
+{
+  "name": "koekje",
+  "version": "0.0.0",
+  "description": "A sessionStorage interface for cookies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unshiftio/koekje"
+  },
+  "keywords": [
+    "koekje",
+    "storage",
+    "cookie",
+    "cookies",
+    "dom",
+    "dom-storage"
+  ],
+  "author": "Arnout Kazemier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unshiftio/koekje/issues"
+  },
+  "homepage": "https://github.com/unshiftio/koekje",
+  "dependencies": {
+    "cookie-monster": "0.0.x",
+    "querystringify": "0.0.2"
+  }
+}
