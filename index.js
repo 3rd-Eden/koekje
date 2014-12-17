@@ -98,3 +98,8 @@ var koekje = module.exports = {
     return 'object' === typeof navigator && navigator.cookieEnabled;
   }())
 };
+
+//
+// Make sure that we initialize the storage so it pre-fills the `.length`
+//
+update();
