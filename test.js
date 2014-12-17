@@ -70,7 +70,7 @@ describe('koekje', function () {
 
       cs.clear();
       assume(cs.length).equals(0);
-      assume(document.cookie).equals('koekje=; expires=Thu Jan 01 1970 01:00:00 GMT+0100 (CET)');
+      assume(document.cookie).includes('koekje=; expires=Thu Jan 01 1970');
     });
   });
 });
