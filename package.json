@@ -1,6 +1,6 @@
 {
   "name": "koekje",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A sessionStorage interface for cookies",
   "main": "index.js",
   "scripts": {
