@@ -1,6 +1,15 @@
 # koekje
 
-Koekje is dutch for `cookie` and it's also DOM Storage API compatiable storage
+[![Made by unshift][made-by]](http://unshift.io)[![Version npm][version]](http://browsenpm.org/package/koekje)[![Build Status][build]](https://travis-ci.org/unshiftio/koekje)[![Dependencies][david]](https://david-dm.org/unshiftio/koekje)[![Coverage Status][cover]](https://coveralls.io/r/unshiftio/koekje?branch=master)[![IRC channel][irc]](http://webchat.freenode.net/?channels=unshift)
+
+[made-by]: https://img.shields.io/badge/made%20by-unshift-00ffcc.svg?style=flat-square
+[version]: https://img.shields.io/npm/v/koekje.svg?style=flat-square
+[build]: https://img.shields.io/travis/unshiftio/koekje/master.svg?style=flat-square
+[david]: https://img.shields.io/david/unshiftio/koekje.svg?style=flat-square
+[cover]: https://img.shields.io/coveralls/unshiftio/koekje/master.svg?style=flat-square
+[irc]: https://img.shields.io/badge/IRC-irc.freenode.net%23unshift-00a8ff.svg?style=flat-square
+
+Koekje is dutch for `cookie` and it's also DOM Storage API compatible storage
 layer for storing data in a... **cookie**.
 
 ## Installation
