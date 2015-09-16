@@ -14,7 +14,7 @@ var has = Object.prototype.hasOwnProperty
 function update() {
   if (!koekje.supported) return;
 
-  var data = cookie.get('koekje')
+  var data = cookie.get('koekje') || ''
     , length = 0
     , key;
 
