@@ -1,10 +1,19 @@
 'use strict';
 
 var has = Object.prototype.hasOwnProperty
-  , cookie = require('cookie-monster')
+  , monster = require('cookie-monster')
   , qs = require('querystringify')
   , storage = {}
-  , prefix = '§';
+  , prefix = '§'
+  , cookie;
+
+//
+// The export interface of the cookie-monster module is quite odd, if there is
+// no `document` in global it will simply not export the `get` and `set`
+// methods. Causing this module to fail on `undefined` function calls. Default
+// to an empty object when document doesn't exists solves it.
+//
+cookie = monster('undefined' !== typeof document ? document : {});
 
 /**
  * Refresh the storage as other users might also be writing against it.
@@ -83,6 +92,7 @@ var koekje = module.exports = {
    */
   clear: function clear() {
     storage = {};
+
     cookie.set('koekje', '', {
       expires: new Date(0)
     });
@@ -98,7 +108,15 @@ var koekje = module.exports = {
    */
   supported: (function supported() {
     return 'object' === typeof navigator && navigator.cookieEnabled;
-  }())
+  }()),
+
+  /**
+   * Completely re-initiate the storage.
+   *
+   * @type {Function}
+   * @api private
+   */
+  update: update
 };
 
 //

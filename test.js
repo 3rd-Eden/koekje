@@ -2,7 +2,8 @@ describe('koekje', function () {
   'use strict';
 
   //
-  // Polyfill
+  // Needs to be defined **before** we require the module so it doesn't start
+  // failing.
   //
   global.document = {
     cookie: 'koekje=%C2%A7foo%3Dbar%26bar%3Dfoo'
@@ -71,6 +72,14 @@ describe('koekje', function () {
       cs.clear();
       assume(cs.length).equals(0);
       assume(document.cookie).includes('koekje=; expires=Thu Jan 01 1970');
+    });
+  });
+
+  describe('#update', function () {
+    it('works without a cookie', function () {
+      global.document.cookie = '';
+
+      cs.update();
     });
   });
 });
