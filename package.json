@@ -1,6 +1,6 @@
 {
   "name": "koekje",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A sessionStorage interface for cookies",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "pre-commit": "1.1.x"
   },
   "dependencies": {
-    "cookie-monster": "0.0.x",
+    "cookie-monster": "0.1.x",
     "querystringify": "0.0.x"
   }
 }
