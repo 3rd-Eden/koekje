@@ -23,14 +23,18 @@ cookie = monster('undefined' !== typeof document ? document : {});
 function update() {
   if (!koekje.supported) return;
 
-  var data = cookie.get('koekje') || ''
+  var data = cookie.get('koekje')
     , length = 0
     , key;
 
-  data = data.charAt(0) === prefix ? data : '';
-  storage = qs.parse(data.slice(1));
+  storage = data && data.charAt(0) === prefix
+    ? qs.parse(data.slice(1))
+    : {};
 
-  for (key in storage) length++;
+  for (key in storage) {
+    if (has.call(storage, key)) length++;
+  }
+
   koekje.length = length;
 }
 
