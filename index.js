@@ -1,7 +1,7 @@
 'use strict';
 
 var has = Object.prototype.hasOwnProperty
-  , monster = require('cookie-monster')
+  , monster = require('koekiemonster')
   , qs = require('querystringify')
   , storage = {}
   , prefix = '§'
@@ -23,7 +23,7 @@ cookie = monster('undefined' !== typeof document ? document : {});
 function update() {
   if (!koekje.supported) return;
 
-  var data = cookie.get('koekje')
+  var data = cookie.getItem('koekje')
     , length = 0
     , key;
 
@@ -69,7 +69,7 @@ var koekje = module.exports = {
    */
   setItem: function setItem(key, value) {
     storage[key] = value;
-    cookie.set('koekje', qs.stringify(storage, prefix));
+    cookie.setItem('koekje', qs.stringify(storage, prefix));
 
     koekje.length++;
   },
@@ -83,7 +83,7 @@ var koekje = module.exports = {
    */
   removeItem: function removeItem(key) {
     delete storage[key];
-    cookie.set('koekje', qs.stringify(storage, prefix));
+    cookie.setItem('koekje', qs.stringify(storage, prefix));
 
     koekje.length--;
   },
@@ -97,7 +97,7 @@ var koekje = module.exports = {
   clear: function clear() {
     storage = {};
 
-    cookie.set('koekje', '', {
+    cookie.setItem('koekje', '', {
       expires: new Date(0)
     });
 
