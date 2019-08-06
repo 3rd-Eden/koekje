@@ -29,13 +29,13 @@
   },
   "homepage": "https://github.com/unshiftio/koekje",
   "devDependencies": {
-    "assume": "1.5.x",
+    "assume": "2.2.x",
     "istanbul": "0.4.x",
-    "mocha": "3.4.x",
+    "mocha": "6.2.x",
     "pre-commit": "1.2.x"
   },
   "dependencies": {
-    "koekiemonster": "1.0.x",
-    "querystringify": "1.0.x"
+    "koekiemonster": "2.2.x",
+    "querystringify": "2.1.x"
   }
 }
